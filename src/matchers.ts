@@ -1081,3 +1081,6 @@ export async function matchesModeration(
     reason: 'No relevant moderation flags detected',
   };
 }
+
+
+export { nunjucks, cosineSimilarity, fromVars, loadFromProviderOptions, fail };
