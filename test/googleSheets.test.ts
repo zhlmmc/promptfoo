@@ -36,12 +36,10 @@ const mockSpreadsheetsApi = {
   batchUpdate: jest.fn(),
 };
 
-// Update mock setup for better auth handling
 const mockAuthClient = {
   getClient: jest.fn().mockResolvedValue({}),
 };
 
-// Mock Google Sheets API
 jest.mock('@googleapis/sheets', () => {
   return {
     sheets: jest.fn(() => ({
@@ -142,7 +140,6 @@ describe('Google Sheets Integration', () => {
 
     beforeEach(() => {
       jest.clearAllMocks();
-      // Set up default sheet response
       spreadsheets.get.mockResolvedValue({
         data: {
           sheets: [
@@ -209,7 +206,6 @@ describe('Google Sheets Integration', () => {
 
     beforeEach(() => {
       jest.clearAllMocks();
-      // Set up default sheet response
       spreadsheets.get.mockResolvedValue({
         data: {
           sheets: [
@@ -245,7 +241,6 @@ describe('Google Sheets Integration', () => {
     });
 
     it('should create new sheet when no gid provided', async () => {
-      // Mock Date.now() to get consistent sheet names in tests
       const mockDate = 1234567890;
       jest.spyOn(Date, 'now').mockReturnValue(mockDate);
 
