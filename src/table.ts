@@ -70,3 +70,6 @@ export function wrapTable(rows: Record<string, string | number>[]) {
   }
   return table;
 }
+
+
+export { ellipsize };
