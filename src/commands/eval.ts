@@ -650,3 +650,6 @@ export function evalCommand(
 
   return evalCmd;
 }
+
+
+export { EvalCommandSchema, showRedteamProviderLabelMissingWarning };
